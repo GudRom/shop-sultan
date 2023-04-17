@@ -81,7 +81,7 @@ function App() {
   return (
     <>
       <Routes>
-        <Route path="/" element={<Layout />}>
+        <Route path="https://gudrom.github.io/shop-sultan/" element={<Layout />}>
           <Route
             index
             element={
