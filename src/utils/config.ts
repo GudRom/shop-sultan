@@ -11,4 +11,4 @@ export const COUNT_FILTERS = 5;
 
 export const GOODS_PER_PAGE = 8;
 
-export const LOCAL_STORAGE_NAME = "newGoods";
+export const START_PAGE_PATH = "https://gudrom.github.io/shop-sultan/";

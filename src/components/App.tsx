@@ -20,6 +20,7 @@ import {
 } from "../store/slices/goodSlice";
 import data from "../utils/data.json";
 import { addBrands, addProducers } from "../store/slices/filterSlice";
+import { START_PAGE_PATH } from "../utils/config";
 
 function App() {
   const dispatch = useAppDispatch();
@@ -81,7 +82,7 @@ function App() {
   return (
     <>
       <Routes>
-        <Route path="https://gudrom.github.io/shop-sultan/" element={<Layout />}>
+        <Route path={START_PAGE_PATH} element={<Layout />}>
           <Route
             index
             element={

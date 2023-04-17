@@ -7,6 +7,7 @@ import SearchElement from "../../../UI/SearchElement/SearchElement";
 
 import "./MainPart.scss";
 import { useAppSelector } from "../../../../store/hook";
+import { START_PAGE_PATH } from "../../../../utils/config";
 
 interface Props {}
 
@@ -25,7 +26,7 @@ const MainPart = (props: Props) => {
   return (
     <div className="main-part">
       <button className="main-part__menu-btn"></button>
-      <NavLink to={"/"}>
+      <NavLink to={START_PAGE_PATH}>
         <img className="main-part__logo" src={logo} alt="логотип" />
       </NavLink>
 
