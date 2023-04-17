@@ -1,0 +1,299 @@
+@import "../../UI/modules/mixins.scss", "../../UI/modules/variables.scss";
+
+.footer {
+  background-color: $darkblue;
+  color: white;
+  padding: 71px 0 116px;
+
+  &__wrapper {
+    position: relative;
+    max-width: 1366px;
+    display: flex;
+    margin: 0 auto;
+  }
+
+  &__company-box {
+    max-width: 320px;
+    margin-right: 60px;
+  }
+
+  &__logo {
+    height: 66px;
+    width: 156px;
+  }
+
+  &__description {
+    font-size: 1.143rem;
+    line-height: 1.5;
+    margin: 15px 0 45px;
+  }
+
+  &__form {
+    width: 282px;
+  }
+
+  &__form-text {
+    font-size: 0.857rem;
+    line-height: 1.5;
+    margin: 0 0 14px 0;
+  }
+
+  &__input-box {
+    position: relative;
+    width: 100%;
+  }
+
+  &__input {
+    width: 100%;
+    border: none;
+    background-color: #fff;
+    border-radius: 36px;
+    padding: 20.5px 10px 20.5px 20px;
+    box-sizing: border-box;
+    font-size: 0.857rem;
+    line-height: 1.5;
+
+    &:focus {
+      outline: 1px solid $gold;
+    }
+
+    &::placeholder {
+      font-family: "Inter";
+      font-weight: 400;
+      font-size: 0.857rem;
+      line-height: 1.5;
+      color: #5c6370;
+      opacity: 0.6;
+    }
+  }
+
+  &__send-btn {
+    position: absolute;
+    @include addImg("../../../images/utils/arrow-circle.svg");
+    background-color: transparent;
+    width: 39px;
+    height: 39px;
+    border: none;
+    top: 10px;
+    right: 10px;
+  }
+
+  &__block-list {
+    @include clearListStyle();
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__block-list-item {
+    margin-right: 95px;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__block-name {
+    font-weight: 600;
+    font-size: 1.429rem;
+    line-height: 1.5;
+    margin: 0;
+    margin-bottom: 25px;
+  }
+
+  &__nav-list {
+    @include clearListStyle();
+  }
+
+  &__nav-list-item {
+    margin-bottom: 20px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__nav-link {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0;
+  }
+
+  &__btn-pricelist {
+    width: 214px;
+    height: 59px;
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 1.21;
+  }
+
+  &__social-block {
+    margin-top: 20px;
+  }
+
+  &__text {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin: 0;
+  }
+
+  &__social-links {
+    display: flex;
+    margin-top: 15px;
+  }
+
+  &__link {
+    width: 39px;
+    height: 39px;
+    &_whatsapp {
+      @include addImg("../../../images/utils/whatsapp.svg");
+      margin-right: 10px;
+    }
+    &_tg {
+      @include addImg("../../../images/utils/telegram.svg");
+    }
+  }
+
+  &__call-box {
+    margin-bottom: 25px;
+  }
+
+  &__contact-text {
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 1.5;
+    text-decoration: none;
+    color: #fff;
+  }
+
+  &__sub {
+    font-weight: 300;
+    font-size: 0.857rem;
+    line-height: 1.5;
+    margin: 0;
+  }
+
+  &__callback {
+    margin: 0 0 25px;
+    font-size: 0.714rem;
+    line-height: 1.5;
+    text-decoration-line: underline;
+  }
+
+  &__img {
+    width: 61px;
+    height: 39px;
+
+    &_visa {
+      @include addImg("../../../images/utils/visa.svg");
+      margin-right: 5px;
+    }
+
+    &_master {
+      @include addImg("../../../images/utils/mastercard.svg");
+    }
+  }
+}
+
+@media (max-width: 1406px) {
+  .footer {
+    &__wrapper {
+      margin: 0 20px;
+    }
+    &__block-list {
+      justify-content: space-between;
+      width: 100%;
+    }
+
+    &__block-list-item {
+      margin-right: 20px;
+    }
+  }
+}
+
+@media (max-width: 1120px) {
+  .footer {
+    &__block-list-item {
+      margin-bottom: 25px;
+    }
+  }
+}
+
+@media (max-width: 810px) {
+  .footer {
+    &__wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: 0 15px;
+    }
+    &__company-box {
+      max-width: 90vw;
+      margin-right: 0;
+      margin-bottom: 30px;
+    }
+  }
+}
+
+@media (max-width: 425px) {
+  .footer {
+    padding: 16px 0;
+
+    &__block-list-item {
+      margin-right: 0;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    &__block-name {
+      &_invisible {
+        display: none;
+      }
+    }
+
+    &__btn-pricelist {
+      width: 149px;
+      height: 40px;
+      position: absolute;
+      top: 15px;
+      right: 0.0469vw;
+    }
+
+    &__social-block {
+      margin: 0;
+      position: absolute;
+      bottom: 90px;
+      right: 0.09375vw;
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  .footer {
+    &__logo {
+      width: 97px;
+      height: 41px;
+    }
+
+    &__description {
+      font-size: 0.857rem;
+      margin: 15px 0;
+    }
+
+    &__form {
+      width: 100%;
+    }
+
+    &__nav-link {
+      font-size: 0.857rem;
+    }
+    &__btn-pricelist {
+      top: 0;
+    }
+
+    &__social-block {
+      max-width: 123px;
+    }
+  }
+}

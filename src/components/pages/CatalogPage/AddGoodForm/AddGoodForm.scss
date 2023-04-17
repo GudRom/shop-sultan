@@ -1,0 +1,121 @@
+@import "../../../UI/modules/mixins.scss", "../../../UI/modules/variables.scss";
+
+.add-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  // .add-form__title
+
+  &__title {
+    font-weight: 500;
+    font-size: 1.8rem;
+    line-height: 120%;
+    text-align: center;
+    color: #3f4e65;
+    margin: 30px 0 0;
+  }
+
+  // .add-form__inputs-list
+
+  &__inputs-list {
+    @include clearListStyle();
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 30px 0 20px;
+  }
+
+  // .add-form__input-list-item
+
+  &__input-list-item {
+    margin-bottom: 8px;
+    display: flex;
+    flex-direction: column;
+
+    &_center {
+      align-self: center;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  // .add-form__input
+
+  &__input {
+    border: none;
+    border-bottom: 1px solid $darkblue;
+    font-weight: 300;
+    font-size: 1.2rem;
+    line-height: 1.2;
+    color: #3f4e65;
+    padding: 2px 7px;
+    margin-left: 5px;
+    box-sizing: border-box;
+
+    &:focus {
+      outline: none;
+      border-bottom: 2px solid $gold;
+    }
+  }
+
+  // .add-form__label
+
+  &__label {
+    font-weight: 300;
+    font-size: 1.2rem;
+    line-height: 1.2;
+    color: #3f4e65;
+  }
+
+  // .add-form__select
+
+  &__select {
+    border: none;
+  }
+
+  // .add-form__option
+
+  &__option {
+    font-weight: 300;
+    font-size: 1.2rem;
+    line-height: 1.2;
+    color: #3f4e65;
+  }
+
+  // .add-form__text-area
+
+  &__text-area {
+    border: 1px solid $darkblue;
+    font-weight: 300;
+    font-size: 1rem;
+    line-height: 1.1;
+    color: #3f4e65;
+    resize: none;
+  }
+
+  &__submit {
+    @include yellowBtn();
+    font-weight: 500;
+    font-size: 1.2rem;
+    line-height: 1.2;
+    padding: 0.7em 1.2em;
+
+    &_disabled {
+      opacity: 0.5;
+
+      &:hover {
+        opacity: 0.5;
+        cursor: not-allowed;
+      }
+    }
+  }
+
+  &__error {
+    font-weight: 500;
+    font-size: 0.8rem;
+    line-height: 1.1;
+    color: rgba(255, 52, 52, 0.911);
+  }
+}

@@ -1,0 +1,247 @@
+@import "../../../UI/modules/mixins.scss", "../../../UI/modules/variables.scss";
+
+.main-part {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1366px;
+  margin: 0 auto;
+  padding: 4px 0 12px;
+
+  &__menu-btn {
+    display: none;
+    @include addImg("../../../../images/utils/menu-mobile.svg");
+    width: 32px;
+    height: 32px;
+    border: none;
+    background-color: transparent;
+    padding: 0;
+  }
+
+  &__logo {
+    height: 66px;
+    width: 156px;
+  }
+
+  &__btn-catalog {
+    width: 192px;
+    height: 59px;
+  }
+
+  &__btn-pricelist {
+    width: 200px;
+    height: 59px;
+  }
+
+  &__catalog-box {
+    display: flex;
+    justify-content: space-between;
+    width: 470px;
+  }
+
+  &__call-info {
+    display: flex;
+  }
+
+  &__call-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    margin-right: 10px;
+  }
+
+  &__text {
+    color: #111;
+    text-decoration: none;
+    font-size: 1rem;
+    line-height: 1.5;
+    font-weight: 600;
+    margin: 0;
+  }
+
+  &__sub {
+    font-weight: 300;
+    font-size: 0.857rem;
+    line-height: 1.5;
+    color: $darkblue;
+    margin: 5px 0;
+  }
+
+  &__callback {
+    margin: 0;
+    font-size: 0.714rem;
+    line-height: 1.5;
+    text-decoration-line: underline;
+  }
+
+  &__operator {
+    position: relative;
+    @include addImg("../../../images/utils/operator.png");
+    height: 92px;
+    width: 70px;
+    z-index: 1;
+  }
+
+  &__light {
+    position: absolute;
+    top: 29px;
+    right: 6px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #1fd85d;
+    border: 2px solid #f0f6fa;
+    z-index: 2;
+  }
+
+  &__line {
+    border-right: 1px dashed $darkblue;
+    opacity: 0.1;
+    height: 49px;
+  }
+
+  &__basket-info {
+    display: flex;
+    align-items: center;
+  }
+
+  &__basket-link {
+    text-decoration: none;
+    transition: all 0.2s;
+
+    &:hover {
+      background-color: $gold;
+      border-radius: 50%;
+    }
+
+    &:active {
+      transform: translate(0.9);
+      transition: all 0.5s;
+    }
+  }
+
+  &__basket {
+    position: relative;
+    @include addImg("../../../images/utils/basket.svg");
+    width: 46px;
+    height: 46px;
+  }
+
+  &__amount-circle {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: $gold;
+    border: 3px solid #ffffff;
+    top: -6px;
+    right: -14px;
+  }
+
+  &__amount {
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 1.21;
+    text-align: center;
+    color: #ffffff;
+    margin: 0;
+  }
+
+  &__total {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 24px;
+  }
+}
+
+@media (max-width: 1406px) {
+  .main-part {
+    margin: 0 20px;
+  }
+}
+
+@media (max-width: 1300px) {
+  .main-part {
+    &__operator {
+      display: none;
+    }
+
+    &__catalog-box {
+      flex-wrap: wrap;
+      flex-direction: column-reverse;
+      width: 263px;
+      height: 120px;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .main-part {
+    &__catalog-box {
+      width: 192px;
+    }
+  }
+}
+
+@media (max-width: 950px) {
+  .main-part {
+    &__btn-pricelist {
+      display: none;
+    }
+    &__line {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .main-part {
+    &__call-info {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .main-part {
+    margin: 0 15px;
+
+    &__menu-btn {
+      display: block;
+    }
+
+    &__logo {
+      width: 97px;
+      height: 41px;
+    }
+
+    &__basket {
+      width: 25px;
+      height: 25px;
+      margin-right: 11px;
+    }
+
+    &__amount-circle {
+      width: 17px;
+      height: 17px;
+    }
+
+    &__amount {
+      font-size: 0.714rem;
+      line-height: 1.2;
+    }
+
+    &__catalog-box {
+      display: none;
+    }
+
+    &__total {
+      display: none;
+    }
+  }
+}

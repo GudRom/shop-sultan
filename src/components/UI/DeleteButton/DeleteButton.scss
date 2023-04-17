@@ -1,0 +1,13 @@
+@import "../modules/mixins.scss", "../modules/variables.scss";
+
+.button-delete {
+  @include yellowBtn();
+  width: 59px;
+  height: 59px;
+
+  &__bg-img {
+    @include addImg("../../../images/utils/delete.svg");
+    width: 25px;
+    height: 25px;
+  }
+}

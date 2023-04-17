@@ -1,0 +1,50 @@
+@import "../../../UI/modules/mixins.scss", "../../../UI/modules/variables.scss";
+
+.filter-list {
+  display: flex;
+  @include clearListStyle();
+  margin: 25px 0 30px;
+
+  &__item {
+    margin-right: 11px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__btn {
+    border: none;
+    width: 100px;
+    height: 70px;
+    font-size: 1rem;
+    line-height: 1.214;
+    text-align: center;
+    color: $darkblue;
+    background-color: #fff;
+    box-shadow: 0px 15px 70px -11px rgba(43, 28, 1, 0.04);
+    border-radius: 10px;
+    box-sizing: border-box;
+    padding: 0 20px;
+    &_active {
+      border: 1px solid $gold;
+    }
+    &:hover {
+      cursor: pointer;
+      box-shadow: 0px 15px 70px -11px rgba(43, 28, 1, 0.3);
+    }
+
+    &_checked {
+      border: 1px solid $gold;
+      &:hover {
+        box-shadow: none;
+      }
+    }
+  }
+}
+
+@media (max-width: 620px) {
+  .filter-list {
+    display: none;
+  }
+}

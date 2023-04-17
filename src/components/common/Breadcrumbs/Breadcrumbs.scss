@@ -1,0 +1,58 @@
+@import "../../UI/modules/mixins.scss", "../../UI/modules/variables.scss";
+
+.breadcrumbs {
+  display: flex;
+  @include clearListStyle();
+  margin-top: 45px;
+
+  // .breadcrumbs__item
+
+  &__item {
+    color: $darkblue;
+    border-left: 1px dashed $darkblue;
+
+    &:first-child {
+      border-left: none;
+    }
+
+    &:last-child {
+      margin-left: 10px;
+      padding-left: 10px;
+      border-left: 1px dashed $darkblue;
+      opacity: 0.3;
+    }
+  }
+
+  // .breadcrumbs__location
+
+  &__location {
+    margin: 0;
+  }
+}
+.back-btn {
+  display: none;
+  background-color: transparent;
+  border: none;
+  align-items: center;
+  margin-top: 25px;
+  padding: 0;
+
+  &__text {
+    font-weight: 600;
+    font-size: 0.714;
+    line-height: 1.2;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #3f4e65;
+    margin-left: 5px;
+  }
+}
+
+@media (max-width: 425px) {
+  .breadcrumbs {
+    display: none;
+  }
+  .back-btn {
+    display: flex;
+  }
+}

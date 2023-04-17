@@ -1,0 +1,79 @@
+@import "../../../../UI/modules/mixins.scss",
+  "../../../../UI/modules/variables.scss";
+
+.filter {
+  // .filter__title
+
+  &__title {
+    font-weight: 500;
+    font-size: 1.143rem;
+    line-height: 1.5;
+    color: #111;
+    margin-bottom: 15px;
+  }
+
+  // .filter__list
+
+  &__list {
+    @include clearListStyle();
+    margin-top: 15px;
+  }
+
+  // .filter__list-item
+
+  &__list-item {
+    margin-bottom: 5px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  // .filter__label
+
+  &__label {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: $darkblue;
+    text-transform: capitalize;
+  }
+
+  // .filter__checkbox
+
+  &__checkbox {
+    width: 10px;
+    height: 10px;
+    border: 0.5px solid $darkblue;
+    border-radius: 1px;
+    margin-right: 10px;
+  }
+
+  &__count {
+    font-size: 0.714rem;
+  }
+
+  &__show-btn {
+    margin-top: 21px;
+    background-color: transparent;
+    border: none;
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    font-size: 0.857rem;
+    line-height: 1.5;
+    color: $darkblue;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  &__show-btn-img {
+    @include addImg("../../../../../images/utils/triangle.svg");
+    width: 7px;
+    height: 7px;
+    margin-left: 5px;
+
+    &_turn {
+      transform: rotate(180deg);
+    }
+  }
+}

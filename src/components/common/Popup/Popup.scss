@@ -1,0 +1,41 @@
+@import "../../UI/modules/mixins.scss", "../../UI/modules/variables.scss";
+
+.popup {
+  width: 735px;
+  min-height: 424px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  border: none;
+  position: relative;
+  padding: 15px;
+  box-sizing: border-box;
+
+  &__close-btn {
+    @include addImg("../../../images/utils/close.svg");
+    background-color: transparent;
+    width: 24px;
+    height: 24px;
+    padding: 0;
+    border: none;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+
+    &:hover {
+      cursor: pointer;
+      filter: drop-shadow(1px 1px 1px $darkblue);
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .popup {
+    max-width: 91vw;
+  }
+}
+
+@media (max-width: 425px) {
+  .popup {
+    min-height: 288px;
+  }
+}

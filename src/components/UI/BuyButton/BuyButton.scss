@@ -1,0 +1,19 @@
+@import "../modules/mixins.scss", "../modules/variables.scss";
+
+.buy-btn {
+    font-family: "Inter", sans-serif;
+    width: 100%;
+    height: 100%;
+    @include yellowBtn();
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: 0.15em;
+    color: white;
+
+  &__img {
+    @include addImg("../../../images/utils/basket-white.svg");
+    width: 27px;
+    height: 27px;
+    margin-left: 5px;
+  }
+}

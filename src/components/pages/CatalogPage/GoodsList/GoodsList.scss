@@ -1,0 +1,31 @@
+@import "../../../UI/modules/mixins.scss", "../../../UI/modules/variables.scss";
+
+.goodslist {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &_list {
+    @include clearListStyle();
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 21px;
+    margin-bottom: 30px;
+  }
+
+  &__item {
+    width: 326px;
+    height: 490px;
+  }
+}
+
+@media (max-width: 425px) {
+  .goodslist {
+    gap: 10px;
+
+    &__item {
+      width: 290px;
+    }
+  }
+}
